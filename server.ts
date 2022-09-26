@@ -80,7 +80,9 @@ const resolvers = {
             const selectPost = await client.user.findMany({
                 where: {
                     id: parseInt(userId),
-                    content: 'graphql'
+                    content: {
+                        contains:'graphql'
+                    }
                 },
             })
             return selectPost
