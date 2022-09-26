@@ -133,7 +133,7 @@ const resolvers = {
     },
 }
 
-const server = new ApolloServer({ typeDefs, resolvers })
+const server = new ApolloServer({ typeDefs, resolvers,playground: true})
 
 server.listen().then(({ url }:any) => {
     console.log(`Runing on ${url}`)
